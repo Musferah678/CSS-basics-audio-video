@@ -1,263 +1,345 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
     <title>My CSS Assignment</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Internal CSS -->
     <style>
-        .my-introduction {
-            background-color: #ffe6f0;
+
+        /* ---------------- BASIC CSS ---------------- */
+
+        body {
+            background-color: #f2f7f5;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkgreen;
+            font-family: Georgia, serif;
+        }
+
+        h2 {
+            text-align: center;
             color: darkblue;
+            border-bottom: 2px solid darkblue;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #333333;
+        }
+
+
+        /* ---------------- CSS CLASSES ---------------- */
+
+        .intro {
+            background-color: white;
+            border: 2px solid green;
             padding: 15px;
-            border-radius: 8px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .subject {
+            background-color: #e6f4ea;
+            border: 2px solid darkgreen;
+            padding: 12px;
+            margin: 10px;
+            font-size: 17px;
+        }
+
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+        /* ---------------- CSS IDs ---------------- */
+
+        #main-title {
+            background-color: lightgreen;
+            padding: 15px;
+            border: 3px solid darkgreen;
+        }
+
+        #student-name {
+            color: purple;
+            font-weight: bold;
+        }
+
+        #box-model {
+            background-color: #fff3cd;
+            border: 5px solid orange;
+            padding: 30px;
+            margin: 40px;
+            text-align: center;
+        }
+
+
+        /* ---------------- SPECIFICITY ---------------- */
+
+        p {
+            color: black;
         }
 
         .special-text {
-            color: purple;
+            color: blue;
         }
+
+        #unique-text {
+            color: red;
+        }
+
+
+        /* ---------------- LINKS ---------------- */
+
+        a {
+            color: blue;
+            font-size: 17px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+
+        /* ---------------- BUTTON STYLE ---------------- */
+
+        .my-button {
+            background-color: darkgreen;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>My Learning Web Page</h1>
-        <p>Web Technologies - CSS Assignment</p>
-    </header>
+
+    <!-- MAIN HEADING -->
+
+    <h1 id="main-title">
+        My CSS Assignment
+    </h1>
 
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#subjects">My Subjects</a>
-        <a href="#about">About Me</a>
-        <a href="#css">CSS</a>
-        <a href="#media">Audio & Video</a>
-    </nav>
+    <!-- INTRODUCTION -->
 
+    <div class="intro">
 
-    <!-- Home Section -->
-    <section id="home">
-
-        <h2>Welcome to My Web Page</h2>
+        <h2>Introduction</h2>
 
         <p>
-            My name is Musferah. I am a BSCS, student
-            and I am learning Web Technology.
+            Hello guys! My name is
+            <span id="student-name">Musferah</span>.
+            I am doing my BSCS from FG Degree College.
+            I am learning Web Technology.
         </p>
 
         <p>
-            Today my assignment is about CSS. In this assignment,
-            I am learning and using Inline CSS, Internal CSS and
-            External CSS.
+            Today I am learning
+            <span class="important">CSS</span>.
+            CSS is used to make web pages beautiful
+            and attractive.
         </p>
 
-    </section>
+    </div>
 
 
-    <!-- My Subjects Section -->
-    <section id="subjects">
 
-        <h2>My Subjects</h2>
+    <!-- CSS CLASSES -->
+
+    <h2>Multiple CSS Classes</h2>
+
+    <div class="subject">
+        This is a box using the <b>subject</b> CSS class.
+    </div>
+
+    <div class="subject">
+        CSS classes can be used on many HTML elements.
+    </div>
+
+    <p class="center">
+        This paragraph is using the <b>center</b> class.
+    </p>
+
+
+
+    <!-- CSS IDS -->
+
+    <h2>CSS IDs</h2>
+
+    <p id="student-name">
+        This paragraph is styled using an ID.
+    </p>
+
+
+
+    <!-- SPECIFICITY -->
+
+    <h2>CSS Specificity Demonstration</h2>
+
+    <p>
+        This paragraph has only an HTML element selector.
+    </p>
+
+    <p class="special-text">
+        This paragraph has a CLASS selector, so its color is blue.
+    </p>
+
+    <p id="unique-text" class="special-text">
+        This paragraph has both CLASS and ID.
+        The ID has higher specificity, so the color is red.
+    </p>
+
+    <p>
+        Specificity order:
+        <b>Element &lt; Class &lt; ID</b>
+    </p>
+
+
+
+    <!-- COLORS FONTS BORDERS -->
+
+    <h2>Colors, Fonts and Borders</h2>
+
+    <div class="intro">
 
         <p>
-            These are some of the subjects that I am studying:
+            This box demonstrates
+            <span class="important">colors</span>,
+            different
+            <span class="important">fonts</span>,
+            and
+            <span class="important">borders</span>.
         </p>
 
-        <ul>
-            <li>Computer Architecture</li>
-            <li>Computer Graphics</li>
-            <li>Operating Systems</li>
-            <li>Web Development</li>
-            <li>Mobile Applications</li>
-            <li>Teaching of Quran</li>
-            <li>Introduction to Management</li>
-        </ul>
-
-    </section>
+    </div>
 
 
-    <!-- About Me Article -->
-    <article id="about">
 
-        <h2>About Me</h2>
+    <!-- BOX MODEL -->
 
-        <div class="my-introduction">
+    <h2>Margin, Padding and Border</h2>
 
-            <p>
-                My name is Musferah and I am a BSCS student.
-                I regularly go to college and I try to attend my classes
-                regularly.
-            </p>
+    <div id="box-model">
 
-            <p>
-                I do my daily work on time. On weekends, I try to complete
-                the work that is left during the week.
-            </p>
-
-            <p>
-                I consider myself a good student because I try to learn
-                new things and complete my assignments.
-            </p>
-
-        </div>
-
-
-        <h3>My Hobbies</h3>
+        <h3>CSS Box Model</h3>
 
         <p>
-            I have different hobbies and activities that I enjoy in
-            my free time.
-        </p>
-
-        <ul>
-            <li>I like makeup.</li>
-            <li>I like shopping.</li>
-            <li>I like doing household work.</li>
-            <li>I enjoy gardening.</li>
-            <li>I like learning new things.</li>
-            <li>I love spending time with plants and flowers.</li>
-        </ul>
-
-        <p class="special-text">
-            One funny thing about me is that I do not know how to cook
-            at all!
-        </p>
-
-    </article>
-
-
-    <!-- CSS Section -->
-    <section id="css">
-
-        <h2>My CSS Learning</h2>
-
-        <p>
-            CSS stands for Cascading Style Sheets. CSS is used to
-            make a webpage beautiful and attractive.
-        </p>
-
-        <p>
-            With CSS, we can change colors, backgrounds, fonts,
-            text alignment, spacing and many other things.
-        </p>
-
-
-        <h3>Inline CSS Example</h3>
-
-        <p style="color: darkblue; background-color: #ffe6f0; padding: 10px;">
-            This paragraph is styled using Inline CSS.
-        </p>
-
-
-        <h3>Internal CSS Example</h3>
-
-        <p class="special-text">
-            This paragraph is styled using Internal CSS.
-        </p>
-
-
-        <h3>External CSS</h3>
-
-        <p>
-            The main design of this webpage is created using
-            External CSS from the style.css file.
-        </p>
-
-    </section>
-
-
-    <!-- Useful Websites -->
-    <section>
-
-        <h2>Web Development Learning Websites</h2>
-
-        <p>
-            I use different websites to learn HTML and CSS.
+            This box contains Margin, Padding and Border.
         </p>
 
         <p>
-            <a href="https://www.w3schools.com/" target="_blank">
-                W3Schools
-            </a>
+            Open Browser Developer Tools and inspect this box
+            to see the Box Model.
         </p>
 
-        <p>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-               target="_blank">
-                MDN HTML
-            </a>
+    </div>
+
+
+
+    <!-- SUBJECTS -->
+
+    <h2>My 5th Semester Subjects</h2>
+
+    <div class="subject">
+        1. Computer Architecture
+    </div>
+
+    <div class="subject">
+        2. Computer Graphics
+    </div>
+
+    <div class="subject">
+        3. Mobile Technology
+    </div>
+
+    <div class="subject">
+        4. Mobile Applications
+    </div>
+
+    <div class="subject">
+        5. Web Technology
+    </div>
+
+    <div class="subject">
+        6. Operating System
+    </div>
+
+    <div class="subject">
+        7. Teaching of Holy Quran 2
+    </div>
+
+
+
+    <!-- LEARNING LINKS -->
+
+    <h2>Web Learning Resources</h2>
+
+    <p class="center">
+        I use online websites to learn HTML and CSS.
+    </p>
+
+    <p class="center">
+
+        <a href="https://www.w3schools.com/html/" target="_blank">
+            Learn HTML - W3Schools
+        </a>
+
+        <br><br>
+
+        <a href="https://www.w3schools.com/css/" target="_blank">
+            Learn CSS - W3Schools
+        </a>
+
+        <br><br>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+           target="_blank">
+            CSS - MDN Web Docs
+        </a>
+
+    </p>
+
+
+
+
+
+
+
+
+    <!-- FINAL MESSAGE -->
+
+    <h2>Conclusion</h2>
+
+    <div class="intro">
+
+        <p class="center">
+            CSS makes a simple HTML page beautiful,
+            organized and attractive.
         </p>
 
-        <p>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-               target="_blank">
-                MDN CSS
-            </a>
+        <p class="center">
+            <button class="my-button">
+                I Am Learning CSS
+            </button>
         </p>
 
-    </section>
+    </div>
 
-
-    <!-- Audio and Video -->
-    <section id="media">
-
-        <h2>My Audio and CSS Video</h2>
-
-
-       <h3>My Introduction Audio</h3>
-
-<p>
-    I have also added my own voice recording to this webpage.
-</p>
-
-<audio controls>
-    <source src="my-audio.mp3" type="audio/mpeg">
-</audio>
-
-      
-            
-
-
-        <h3>CSS Learning Video</h3>
-
-        <p>
-            This is a YouTube video that helps me learn CSS.
-        </p>
-
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/1Rs2ND1ryYc"
-            title="CSS Tutorial"
-            allowfullscreen>
-        </iframe>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            Created by Musferah | BSCS Student
-        </p>
-
-        <p>
-            Web Technology Assignment
-        </p>
-
-        <p>
-            My Learning Web Page "2026"
-        </p>
-
-    </footer>
 
 </body>
-
 </html>
